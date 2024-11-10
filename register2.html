@@ -1,0 +1,158 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+    <link href="images/favicon.png" rel="icon">
+    <title>Login & Register</title>
+    <meta name="description" content="Login and Register Form for E-commerce Website">
+    <meta name="author" content="harnishdesign.net">
+
+    <!-- Web Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" type="text/css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .fade-enter-active, .fade-leave-active {
+            transition: opacity 0.5s;
+        }
+        .fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full h-full flex">
+        <div class="w-1/2 p-4 flex flex-col justify-center">
+            <ul class="flex justify-center mb-6">
+                <li class="mr-6">
+                    <a class="text-blue-500 hover:text-blue-800 cursor-pointer shadow-md p-2 rounded" id="signInTab">
+                        Sign In
+                    </a>
+                </li>
+                <li>
+                    <a class="text-gray-500 hover:text-gray-800 cursor-pointer shadow-md p-2 rounded" id="signUpTab">
+                        Sign Up
+                    </a>
+                </li>
+            </ul>
+            <div class="tab-content fade-enter-active" id="signIn">
+                <h2 class="text-2xl font-bold mb-6 text-center">Sign In</h2>
+                <form action="signin.php" id="loginForm" method="post">
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="emailAddress">Email Address</label>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="emailAddress" placeholder="Enter Your Email" required="" type="email"/>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="loginPassword">Password</label>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="loginPassword" placeholder="Enter Password" required="" type="password"/>
+                    </div>
+                    <div class="mb-4">
+                        <div class="flex items-center">
+                            <input class="mr-2 leading-tight" id="rememberMe" name="rememberMe" type="checkbox"/>
+                            <label class="text-sm text-gray-700" for="rememberMe">Remember Me</label>
+                        </div>
+                    </div>
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full shadow-md" type="submit">Sign In</button>
+                </form>
+                <div class="flex justify-center mt-4">
+                    <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mx-2 shadow-md">
+                        <i class="fab fa-google mr-2"></i> Google
+                    </button>
+                    <button class="bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mx-2 shadow-md">
+                        <i class="fab fa-facebook-f mr-2"></i> Facebook
+                    </button>
+                </div>
+                <p class="text-center text-gray-500 text-xs mt-6">
+                    Not a member? <a class="text-blue-500 hover:text-blue-700 cursor-pointer" id="switchToSignUp">Sign up now</a>
+                </p>
+            </div>
+            <div class="tab-content fade-enter" id="signUp">
+                <h2 class="text-2xl font-bold mb-6 text-center">Sign Up</h2>
+                <form action="signup.php" id="registerForm" method="post">
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="fullName">Full Name</label>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="fullName" name="fullName" placeholder="Enter Your Name" required="" type="text"/>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="emailAddress">Email Address</label>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="emailAddress" name="emailAddress" placeholder="Enter Your Email" required="" type="email"/>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="passWord">Password</label>
+                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="passWord" name="passWord" placeholder="Enter Password" required="" type="password"/>
+                    </div>
+                    <div class="mb-4">
+                        <div class="flex items-center">
+                            <input class="mr-2 leading-tight" id="agree" name="agree" type="checkbox"/>
+                            <label class="text-sm text-gray-700" for="agree">I agree to the <a class="text-blue-500 hover:text-blue-700" href="#">Terms</a> and <a class="text-blue-500 hover:text-blue-700" href="#">Privacy Policy</a>.</label>
+                        </div>
+                    </div>
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full shadow-md" type="submit">Sign Up</button>
+                </form>
+                <div class="flex justify-center mt-4">
+                    <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mx-2 shadow-md">
+                        <i class="fab fa-google mr-2"></i> Google
+                    </button>
+                    <button class="bg-blue-800 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mx-2 shadow-md">
+                        <i class="fab fa-facebook-f mr-2"></i> Facebook
+                    </button>
+                </div>
+                <p class="text-center text-gray-500 text-xs mt-6">
+                    Already a member? <a class="text-blue-500 hover:text-blue-700 cursor-pointer" id="switchToSignIn">Sign in now</a>
+                </p>
+            </div>
+        </div>
+        <div class="w-1/2 bg-gray-800 text-white p-8 rounded-lg shadow-lg flex flex-col justify-center items-center">
+            <div class="text-center mb-6">
+                <div class="text-6xl font-bold text-blue-700">TECH</div>
+                <div class="text-6xl font-bold text-blue-700 relative inline-block">
+                    BAY
+                    <span class="absolute -right-8 top-0 text-yellow-500">
+                        <i class="fas fa-tag"></i>
+                    </span>
+                </div>
+            </div>
+            <h1 class="text-3xl font-bold mb-4 text-center">Best Deals, Best Prices, Fast Delivery</h1>
+            <p class="text-center">Consoles, Games, Accessories, Electronics, Phones</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('signInTab').addEventListener('click', function() {
+            document.getElementById('signIn').classList.remove('hidden');
+            document.getElementById('signUp').classList.add('hidden');
+            this.classList.add('text-blue-500');
+            this.classList.remove('text-gray-500');
+            document.getElementById('signUpTab').classList.add('text-gray-500');
+            document.getElementById('signUpTab').classList.remove('text-blue-500');
+            document.getElementById('signIn').classList.add('fade-enter-active');
+            document.getElementById('signUp').classList.remove('fade-enter-active');
+        });
+
+        document.getElementById('signUpTab').addEventListener('click', function() {
+            document.getElementById('signUp').classList.remove('hidden');
+            document.getElementById('signIn').classList.add('hidden');
+            this.classList.add('text-blue-500');
+            this.classList.remove('text-gray-500');
+            document.getElementById('signInTab').classList.add('text-gray-500');
+            document.getElementById('signInTab').classList.remove('text-blue-500');
+            document.getElementById('signUp').classList.add('fade-enter-active');
+            document.getElementById('signIn').classList.remove('fade-enter-active');
+        });
+
+        document.getElementById('switchToSignUp').addEventListener('click', function() {
+            document.getElementById('signUpTab').click();
+        });
+
+        document.getElementById('switchToSignIn').addEventListener('click', function() {
+            document.getElementById('signInTab').click();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,283 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>About Us - ElectroHub</title>
+
+    <!-- External Stylesheets -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome Icons -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- Inline Styles -->
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Header and Navbar */
+        #header {
+            background-color: #030303;
+            padding: 10px 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo a {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .logo a:hover {
+            color: #ff6f61;
+        }
+
+        /* Search Bar Container */
+        .search-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fff;
+            border-radius: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 5px 15px;
+            width: 400px;
+        }
+
+        .search-input {
+            width: 80%;
+            padding: 8px 15px;
+            font-size: 16px;
+            border: none;
+            border-radius: 20px;
+            outline: none;
+            box-shadow: none;
+            transition: all 0.3s ease;
+        }
+
+        .search-input:focus {
+            border: 2px solid #6161ff;
+        }
+
+        .search-button {
+            background-color: #565bf3;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .search-button:hover {
+            background-color: #171818;
+        }
+
+        /* Menu Styling */
+        #menu-items {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        #menu-items li {
+            font-size: 18px;
+        }
+
+        #menu-items li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        #menu-items li a:hover {
+            color: #ff6f61;
+        }
+
+        /* Cart and Menu Icon Styling */
+        .cart-img,
+        .menu-icon {
+            cursor: pointer;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .search-container {
+                width: 100%;
+                margin-top: 15px;
+            }
+
+            #menu-items {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .cart-img,
+            .menu-icon {
+                margin-top: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <div id="header">
+        <div class="container">
+            <div class="navbar">
+
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">
+                        <img alt="ElectroHub Logo" src="images/logo.png" style="height:60px;" />
+                    </a>
+                </div>
+
+                <!-- Search Bar and Menu -->
+                <div class="search-container">
+                    <input class="search-input" id="searchInput" placeholder="Search for products..." type="text" />
+                    <button class="search-button" id="searchButton" aria-label="Search">
+                        Search
+                    </button>
+                </div>
+
+                <!-- Navigation -->
+                <ul id="menu-items">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index2.html">Products</a></li>
+                    <li><a href="abouttk.html">About</a></li>
+                    <li><a href="contacttk.html">Contact</a></li>
+                    <li><a href="register.html">Account</a></li>
+                </ul>
+                <img alt="cart" class="cart-img" height="30px" src="images/cart.png" width="30px" />
+                <img alt="menu" class="menu-icon" height="30px" onclick="menutoggle()" src="images/menu.png" width="30px" />
+            </div>
+        </div>
+    </div>
+
+    <!-- About Us Section -->
+    <div class="container mt-5">
+        <h1 class="text-center mb-5">About Us</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <img alt="Team working together in an office" class="img-fluid" height="400"
+                    src="https://storage.googleapis.com/a1aa/image/xy0sGNDPtB53NNItnFyS4USQtiB2BmjG4x9YOLarqbqvb07E.jpg"
+                    style="border-radius: 10px;" width="600" />
+            </div>
+            <div class="col-md-6">
+                <p>
+                    Welcome to ElectroHub, your number one source for all things electronics. We're dedicated to giving you
+                    the very best of gadgets, with a focus on quality, customer service, and uniqueness.
+                </p>
+                <p>
+                    Founded in 2020 by Tarun Kumar, ElectroHub has come a long way from its beginnings in a home office. When
+                    Tarun first started out, his passion for eco-friendly electronics drove him to do tons of research so
+                    that ElectroHub can offer you the world's most advanced gadgets. We now serve customers all over the world
+                    and are thrilled that we're able to turn our passion into our own website.
+                </p>
+                <p>
+                    We hope you enjoy our products as much as we enjoy offering them to you. If you have any questions or
+                    comments, please don't hesitate to contact us.
+                </p>
+                <p class="font-weight-bold">Sincerely,</p>
+                <p>Tarun Kumar, Founder</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Our Team Section -->
+    <div class="container mt-5">
+        <h2 class="text-center mb-5">Our Team</h2>
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <img alt="Portrait of Tarun Kumar, Founder" class="rounded-circle mb-3" height="150"
+                    src="https://storage.googleapis.com/a1aa/image/lffyKGVsvphFaUU0USlc23gfQjFkCl2UL5R6HyOG18h4djeOB.jpg" width="150" />
+                <h5>Tarun Kumar</h5>
+                <p>Founder & CEO</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <img alt="Portrait of Jane Doe, Marketing Head" class="rounded-circle mb-3" height="150"
+                    src="https://storage.googleapis.com/a1aa/image/bAxJRCWTUjrSPdqlHsWNgHpVvtDS99SIzMQm3f7dsbgc3o3JA.jpg" width="150" />
+                <h5>Jane Doe</h5>
+                <p>Marketing Head</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <img alt="Portrait of John Smith, Lead Developer" class="rounded-circle mb-3" height="150"
+                    src="https://storage.googleapis.com/a1aa/image/1QLNrxnCqi7OMVGQ3gpXeCSHpvAse2SPhGGST3I5eDU0djeOB.jpg" width="150" />
+                <h5>John Smith</h5>
+                <p>Lead Developer</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download our app</h3>
+                    <p>Top G5 Enabled Products with good support</p>
+                    <div class="app-logo">
+                        <img alt="Google Play Store logo" src="images/playstore.png" />
+                        <img alt="Apple App Store logo" src="images/appstore.png" />
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img alt="ElectroHub Logo" src="images/logo.png" />
+                    <p>Best technology-enabled product?</p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affiliate</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>YouTube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr />
+            <p class="copyright">
+                Copyright 2024 Tarun Kumar
+            </p>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
